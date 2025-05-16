@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Virtual Gift Flower</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap');
+
+  body {
+    margin: 0;
+    background: linear-gradient(135deg, #fefefe 0%, #ffd6d6 100%);
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #5a2a27;
+    overflow: hidden;
+    padding: 20px;
+  }
+
+  h1.greeting {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    margin: 20px 0 10px 0;
+    text-align: center;
+    text-shadow: 1px 1px 4px #ff9aa2;
+  }
+
+  p.message {
+    font-size: 1.25rem;
+    max-width: 450px;
+    text-align: center;
+    margin-top: 0;
+    color: #7c4746;
+    line-height: 1.5;
+  }
+
+  .flower-container {
+    width: 280px;
+    height: 280px;
+    margin-top: 30px;
+    animation: float 4s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  /* Flower SVG styling */
+  svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 5px #ff6f91);
+  }
+
+  /* Music controls styling */
+  audio {
+    margin-top: 40px;
+    outline: none;
+    width: 300px;
+  }
+
+  /* Responsive */
+  @media (max-width: 480px) {
+    h1.greeting {
+      font-size: 2.5rem;
+    }
+    .flower-container {
+      width: 180px;
+      height: 180px;
+    }
+    audio {
+      width: 90%;
+    }
+  }
+</style>
+</head>
+<body>
+  <h1 class="greeting">A Special Gift for You</h1>
+  <p class="message">
+    May this virtual flower brighten your day and bring you joy and happiness. 
+    Sending you warm wishes and lots of love!
+  </p>
+  <div class="flower-container" aria-label="Animated flower illustration">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="false" aria-labelledby="title desc">
+      <title>Virtual Flower</title>
+      <desc>A beautiful stylized pink flower with petals and leaves.</desc>
+      <defs>
+        <radialGradient id="petalGradient" cx="50%" cy="50%" r="60%">
+          <stop offset="0%" stop-color="#ff9aa2"/>
+          <stop offset="100%" stop-color="#ff6384"/>
+        </radialGradient>
+        <radialGradient id="centerGradient" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#ffef96"/>
+          <stop offset="100%" stop-color="#ffb347"/>
+        </radialGradient>
+        <radialGradient id="leafGradient" cx="50%" cy="50%" r="60%">
+          <stop offset="0%" stop-color="#a8d5ba"/>
+          <stop offset="100%" stop-color="#077b5a"/>
+        </radialGradient>
+      </defs>
+      <!-- Petals -->
+      <g transform="translate(100 100)">
+        <g id="petals">
+          <ellipse fill="url(#petalGradient)" rx="20" ry="40" transform="rotate(0)" />
+          <ellipse fill="url(#petalGradient)" rx="20" ry="40" transform="rotate(45)" />
+          <ellipse fill="url(#petalGradient)" rx="20" ry="40" transform="rotate(90)" />
+          <ellipse fill="url(#petalGradient)" rx="20" ry="40" transform="rotate(135)" />
+          <ellipse fill="url(#petalGradient)" rx="20" ry="40" transform="rotate(180)" />
+          <ellipse fill="url(#petalGradient)" rx="20" ry="40" transform="rotate(225)" />
+          <ellipse fill="url(#petalGradient)" rx="20" ry="40" transform="rotate(270)" />
+          <ellipse fill="url(#petalGradient)" rx="20" ry="40" transform="rotate(315)" />
+        </g>
+        <!-- Center -->
+        <circle fill="url(#centerGradient)" r="30" />
+      </g>
+      <!-- Stem -->
+      <rect x="95" y="110" width="10" height="60" rx="5" ry="5" fill="url(#leafGradient)" />
+      <!-- Leaves -->
+      <ellipse cx="80" cy="140" rx="20" ry="10" fill="url(#leafGradient)" transform="rotate(-30 80 140)" />
+      <ellipse cx="120" cy="160" rx="20" ry="10" fill="url(#leafGradient)" transform="rotate(30 120 160)" />
+    </svg>
+  </div>
+
+  <audio controls autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_546e7dbad7.mp3?filename=beautiful-background-music-for-videos---instrumental-soft-music---christian-music-8613.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+</body>
+</html>
+

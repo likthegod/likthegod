@@ -212,7 +212,11 @@
   <div class="falling-stars" aria-hidden="true"></div>
 
   <!-- Hidden audio for auto play -->
-  <audio id="bg-music" src="musik.mp3" loop></audio>
+  <audio controls autoplay>
+  <source src="musiku.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+  </audio>
+  
 
   <script>
     // Play music automatically once page loads
